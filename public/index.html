@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Quizzed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+            font-size: 14px;
+        }
+
+        .topics {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+
+        .topics button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #025f63;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .topics button:hover {
+            background-color: #024d52;
+        }
+
+
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome To Quizzed</h1>
+        <div class="search-bar">
+            <input type="text" id="search-box" placeholder="Search Your Topic">
+        </div>
+    </div>
+    <main>
+        <section id="topics" class="topics">
+            <button type="button">IQ</button>
+            <button type="button">Physics</button>
+            <button type="button">Engineering</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2023 Quizzed App</p>
+    </footer>
+
+    <script>
+        var buttons = document.querySelectorAll("#topics button");
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                buttons.forEach(btn => {
+                    btn.style.backgroundColor = "#025f63";
+                });
+                this.style.backgroundColor = "black";
+            });
+        });
+    </script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
