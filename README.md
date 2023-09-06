@@ -1,5 +1,18 @@
 # Quizzed App
 
+**Inspiration**
+
+Quizzed was born out of a passion for education and a desire to create a platform that makes learning more accessible and enjoyable. I often found myself seeking engaging ways to expand our knowledge beyond the traditional classroom setting.
+
+My journey began with a simple idea: Why not build a platform that not only tests knowledge but also nurtures curiosity? I envisioned a space where users could challenge themselves, gain instant insights, and track their progress – all while having fun. Quizzed is the realization of that vision.
+
+**My Story**
+
+I spent countless hours designing interactive quizzes, perfecting the user interface, and brainstorming ways to make Quizzed both informative and enjoyable.
+
+I’m proud to say that this project represents not only my technical skills but also my commitment to lifelong learning. It's a testament to the Holberton School's mission of fostering holistic growth in its students.
+
+
 Welcome to Quizzed, a simple web application that allows users to take quizzes on various topics. This project provides a user-friendly interface for taking quizzes and viewing quiz results.
 
 ![Welcome-To-Quizzed](https://github.com/Muth80/quizzed/assets/117746069/2d2b25cc-7253-4c6d-9f64-4755b1c06885)
@@ -81,8 +94,9 @@ Contributions to this project are welcome. If you have ideas for improvements or
 ## Support
 
 Follow my account. https://github.com/Muth80
+Twitter: (https://twitter.com/muindidiego)
 
----
+*Note: Quizzed is a Portfolio Project developed as part of our coursework at Holberton School.*
 
 Enjoy using the Quizzed App for your educational and entertainment purposes! If you encounter any issues or have suggestions, please don't hesitate to [report them](https://github.com/Muth80/quizzed-app/issues). Thank you for using and contributing to this project.
 
