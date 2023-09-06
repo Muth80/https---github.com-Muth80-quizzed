@@ -11,7 +11,7 @@ Welcome to Quizzed, a simple web application that allows users to take quizzes o
 - [Usage](#usage)
 - [Adding Your Own Questions](#adding-your-own-questions)
 - [Contributing](#contributing)
-- [License](#license)
+- [Support](#support)
 
 ## Features
 
