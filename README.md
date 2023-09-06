@@ -95,6 +95,7 @@ Contributions to this project are welcome. If you have ideas for improvements or
 
 Follow my account. https://github.com/Muth80
 Twitter: (https://twitter.com/muindidiego)
+LinkedIn: (https://www.linkedin.com/in/davidmuindi/)
 
 *Note: Quizzed is a Portfolio Project developed as part of our coursework at Holberton School.*
 
