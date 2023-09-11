@@ -181,23 +181,22 @@
             grid-row: 3 / 2;
         }
 
-        
-
-
-
     </style>
-
-
 </head>
 <body>
-    <div class="header">
+<!-- Heading of the Webpage -->
+<div class="header">
         <h1>Welcome To Quizzed</h1>
+        <!-- Text box for search function -->
         <div class="search-bar">
             <input type="text" id="search-box" placeholder="Search Your Topic">
         </div>
-    </div>
+</div>
+    <!-- Main layout of the webpage -->
     <main style="display: flex; flex-direction: column;">
+        <!-- Section of the webpage with various quiz topics -->
         <section id="topics" class="topics">
+             <!-- A set of buttons each linked to a different quiz on the given topic -->
             <div>
                 <button type="button" onclick="startQuiz('IQ Test')">IQ Test</button>
             </div>
@@ -207,6 +206,7 @@
             <div>
                 <button type="button" onclick="startQuiz('Engineering')">Engineering</button>
             </div>
+            <!-- More buttons for more topics -->
             <button type="button" onclick="startQuiz('Mathematics')">Mathematics</button>
             <button type="button" onclick="startQuiz('History')">History</button>
             <button type="button" onclick="startQuiz('Science')">Science</button>
@@ -222,18 +222,23 @@
         </section>
         
 
-
+        <!-- Section where the actual quiz will be displayed. Hidden by default. -->
         <section id="quiz" class="main" style="display: none;">
             <div class="quiz-container">
+                <!-- Place where the quiz question will be displayed -->
                 <h2 id="question"></h2>
+                <!-- Place where the quiz options will be displayed -->
                 <div id="options" class="options-container"></div>
     
-
+                <!-- Button to go back to the list of topics. Hidden by default -->
             <button onclick="showTopics()" class="back-button" style="display: none;">Back to Topics</button>
+            <!-- Button to reset the quiz -->
             <button onclick="resetQuiz()" class="back-button">Restart</button>
         </section>
+        <!-- Section which displays the result after the quiz. Hidden by default -->
         <section id="result" class="main" style="display: none;">
             <div class="result-container">
+                <!-- Place where the score will be displayed -->
                 <h2>Your Score:</h2>
                 <p id="score"></p>
                 <button onclick="window.location.reload();">Start Over</button>
@@ -243,6 +248,7 @@
                 
         </section>
     </main>
+    <!-- This is the footer section of the HTML page -->
     <footer class="footer">
         <p>&copy; 2023 Quizzed App</p>
     </footer>
@@ -337,29 +343,29 @@
                 // Add more Engineering questions here
             ]
         };
-
+        //Function to start quiz with a given topic.
         function startQuiz(topic) {
-            currentTopic = topic;
-            currentQuestion = 0;
+            currentTopic = topic; //Setting the topic which the user currently playing.
+            currentQuestion = 0; //Keeping counter for current question.
             score = 0;
-            displayQuestion();
-            document.getElementById("topics").style.display = "none";
-            document.getElementById("quiz").style.display = "block";
+            displayQuestion();//Function call to display question.
+            document.getElementById("topics").style.display = "none"; //Hiding topic section, when user starts the quiz.
+            document.getElementById("quiz").style.display = "block"; //Displaying quiz section, when user starts the quiz.
         }
-
+        
         function displayQuestion() {
-            var questionElement = document.getElementById("question");
-            var optionsElement = document.getElementById("options");
+            var questionElement = document.getElementById("question"); //Getting question element.
+            var optionsElement = document.getElementById("options"); //Getting options element.
             var currentQuiz = questions[currentTopic][currentQuestion];
 
             questionElement.textContent = currentQuiz.question;
-            optionsElement.innerHTML = "";
+            optionsElement.innerHTML = ""; //Clearing options for each question.
 
             currentQuiz.options.forEach(function (option, index) {
-                var optionButton = document.createElement("button");
+                var optionButton = document.createElement("button"); //Creating button for each option.
                 optionButton.textContent = option;
                 optionButton.onclick = function () {
-                    checkAnswer(option);
+                    checkAnswer(option); //Checking clicked option is correct or wrong.
                 };
                 optionsElement.appendChild(optionButton);
             });
@@ -367,24 +373,25 @@
 
         function checkAnswer(selectedOption) {
             var currentQuiz = questions[currentTopic][currentQuestion];
+            //Incrementing score, when user selects correct option.
             if (selectedOption === currentQuiz.correctAnswer) {
                 score++;
             }
-            currentQuestion++;
-
+            currentQuestion++; //Moving to next question.
+            //Checking there is more question or not.
             if (currentQuestion < questions[currentTopic].length) {
                 displayQuestion();
             } else {
-                showResult();
+                showResult(); //If there is no more question, then showing result.
             }
         }
-
+        //Function to show the result after user completes the quiz.
         function showResult() {
-            document.getElementById("quiz").style.display = "none";
-            document.getElementById("result").style.display = "block";
-            var scoreElement = document.getElementById("score");
+            document.getElementById("quiz").style.display = "none"; //Hiding quiz section, when quiz is completed.
+            document.getElementById("result").style.display = "block"; //Showing result section, when quiz is completed.
+            var scoreElement = document.getElementById("score"); //Displaying user's score.
             var totalQuestions = questions[currentTopic].length;
-            var percentage = (score / totalQuestions) * 100;
+            var percentage = (score / totalQuestions) * 100; //Calculating score in percentage.
             scoreElement.textContent = "You scored " + percentage.toFixed(2) + "%";
         }
 
@@ -395,7 +402,7 @@
                 showResult();
             }
         }
-
+        //Function to reset the quiz i.e. moving to the first question.
         function resetQuiz() {
             currentQuestion = 0;
             displayQuestion();
@@ -403,16 +410,23 @@
     </script>
     
     <script>
+        // Get the search box element by its ID
         var searchBox = document.getElementById('search-box');
-
+        // Add a keyup event listener to the search box
+        // This function is triggered each time a key is released while the search box has focus
         searchBox.addEventListener('keyup', function (e) {
-            var key = e.which || e.keyCode;
+            var key = e.which || e.keyCode; // Get the ASCII value of the key that has been released
+            // Check if the Enter key was released by comparing the ASCII value
             if (key === 13) { // 13 is the key code for Enter
+                // Get the current value from the search box &
+                // converting to lower case to avoid case sensitive issues
                 var inputVal = e.target.value.toLowerCase();
+                 // Check if the input value exists in the questions object keys
+                // If it does not exist, the index of the value will be less than 0
                 if (Object.keys(questions).indexOf(inputVal) < 0) {
                     alert("This topic \"" + e.target.value + "\" isn't available currently but keep checking, we are working on it.");
                 } else {
-                    startQuiz(inputVal);
+                    startQuiz(inputVal);  // If the input does exist in the questions object, start the quiz
                 }
             }
         });
