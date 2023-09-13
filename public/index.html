@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <style>
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -180,6 +181,30 @@
          grid-column: 3 / 4;
             grid-row: 3 / 2;
         }
+        @media(max-width: 768px) {
+            .topics {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 10px;
+        }
+        .topics button {
+            font-size: 16px;
+            }
+        }
+        @media(max-width: 480px) {
+            .topics button {
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        h1, h2 {
+            font-size: 24px;
+        }
 
     </style>
 </head>
@@ -341,7 +366,302 @@
                     "correctAnswer": "Store electrical energy"
                 },
                 // Add more Engineering questions here
-            ]
+            ],
+            "Mathematics": [
+                {
+                    "question": "What is the value of π (pi) to two decimal places?",
+                    "options": ["3.14", "3.16", "3.18", "3.20"],
+                    "correctAnswer": "3.14"
+                },
+                {
+                    "question": "Solve for x: 2x + 5 = 15.",
+                        "options": ["5", "6", "7", "8"],
+                    "correctAnswer": "5"
+                },
+                {
+                    "question": "What is the area of a rectangle with length 8 units and width 6 units?",
+                    "options": ["36 sq units", "42 sq units", "48 sq units", "54 sq units"],
+                    "correctAnswer": "48 sq units"
+                },
+                {
+                    "question": "If a pizza is cut into 8 equal slices, and you eat 3 slices, how many slices are left?",
+                    "options": ["2", "3", "4", "5"],
+                    "correctAnswer": "5"
+                },
+                {
+                    "question": "What is the square root of 144?",
+                    "options": ["10", "11", "12", "13"],
+                    "correctAnswer": "12"
+                }
+            ],
+            "History": [
+                {
+                    "question": "Who was the first President of the United States?",
+                    "options": ["Thomas Jefferson", "George Washington", "John Adams", "Benjamin Franklin"],
+                    "correctAnswer": "George Washington"
+                },
+                {
+                    "question": "In which year did Christopher Columbus first arrive in the Americas?",
+                    "options": ["1492", "1500", "1520", "1600"],
+                    "correctAnswer": "1492"
+                },
+                {
+                    "question": "Who was the leader of the Soviet Union during the Cuban Missile Crisis?",
+                    "options": ["Vladimir Putin", "Joseph Stalin", "Nikita Khrushchev", "Mikhail Gorbachev"],
+                    "correctAnswer": "Nikita Khrushchev"
+                },
+                {
+                    "question": "Which war is also known as the First World War?",
+                    "options": ["World War I", "World War II", "Korean War", "Vietnam War"],
+                    "correctAnswer": "World War I"
+                },
+                {
+                    "question": "Who is known for the famous 'I Have a Dream' speech during the Civil Rights Movement?",
+                    "options": ["Martin Luther King Jr.", "Malcolm X", "Rosa Parks", "Frederick Douglass"],
+                    "correctAnswer": "Martin Luther King Jr."
+                }
+                // Add questions for History
+            ],
+            
+            "Geography": [
+                {
+                    "question": "Which continent is the largest by land area?",
+                    "options": ["Africa", "Asia", "North America", "South America"],
+                    "correctAnswer": "Asia"
+                },
+                {
+                    "question": "What is the capital of Japan?",
+                    "options": ["Tokyo", "Kyoto", "Osaka", "Seoul"],
+                    "correctAnswer": "Tokyo"
+                },
+                {
+                    "question": "Which river is the longest in the world?",
+                    "options": ["Amazon River", "Nile River", "Mississippi River", "Yangtze River"],
+                    "correctAnswer": "Nile River"
+                },
+                {
+                    "question": "Which country is known as the Land of the Rising Sun?",
+                    "options": ["China", "India", "Japan", "Australia"],
+                    "correctAnswer": "Japan"
+                },
+                {
+                    "question": "What is the largest desert in the world?",
+                    "options": ["Sahara Desert", "Gobi Desert", "Arabian Desert", "Kalahari Desert"],
+                    "correctAnswer": "Sahara Desert"
+                }
+                // Add questions for Geography
+            ],
+
+
+            "French": [
+                {
+                    "question": "What is the French word for 'hello'?",
+                    "options": ["Bonjour", "Merci", "Oui", "Bonne nuit"],
+                    "correctAnswer": "Bonjour"
+                },
+                {
+                    "question": "Which French city is famous for its Eiffel Tower?",
+                    "options": ["Marseille", "Nice", "Paris", "Lyon"],
+                    "correctAnswer": "Paris"
+                },
+                {
+                    "question": "What is the official currency of France?",
+                    "options": ["Euro", "Dollar", "Pound", "Franc"],
+                    "correctAnswer": "Euro"
+                },
+                {
+                    "question": "Which French dish consists of snails cooked with garlic, butter, and herbs?",
+                    "options": ["Escargot", "Croissant", "Quiche Lorraine", "Bouillabaisse"],
+                    "correctAnswer": "Escargot"
+                },
+                {
+                    "question": "Who is considered one of the most famous French writers and wrote 'Les Misérables'?",
+                    "options": ["Victor Hugo", "Jean-Paul Sartre", "Albert Camus", "Marcel Proust"],
+                    "correctAnswer": "Victor Hugo"
+                }
+                // Add questions for French
+            ],
+            
+            "Science": [
+                {
+                    "question": "What is the chemical symbol for water?",
+                    "options": ["Wo", "Wa", "H2O", "O2"],
+                    "correctAnswer": "H2O"
+                },
+                {
+                    "question": "Which gas do plants absorb from the atmosphere during photosynthesis?",
+                    "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+                    "correctAnswer": "Carbon Dioxide"
+                },
+                {
+                    "question": "What is the smallest unit of matter?",
+                    "options": ["Cell", "Atom", "Molecule", "Element"],
+                    "correctAnswer": "Atom"
+                },
+                {
+                    "question": "Which planet is known as the 'Red Planet'?",
+                    "options": ["Venus", "Earth", "Mars", "Saturn"],
+                    "correctAnswer": "Mars"
+                },
+                {
+                    "question": "What force keeps objects on the Earth's surface?",
+                    "options": ["Gravity", "Magnetism", "Friction", "Tension"],
+                    "correctAnswer": "Gravity"
+                }
+                // Add questions for Science
+            ],
+
+
+            "Algebra": [
+                {
+                    "question": "Solve for x: 2x + 3 = 9.",
+                    "options": ["2", "3", "4", "5"],
+                    "correctAnswer": "3"
+                },
+                {
+                    "question": "What is the equation of a straight line with a slope of 2 and a y-intercept of 1?",
+                    "options": ["y = 2x + 1", "y = x + 2", "y = 2x - 1", "y = x - 2"],
+                    "correctAnswer": "y = 2x + 1"
+                },
+                {
+                    "question": "If 3x - 5 = 7, what is the value of x?",
+                    "options": ["2", "4", "6", "8"],
+                    "correctAnswer": "4"
+                },
+                {
+                    "question": "Simplify the expression: 2(x + 3) - 4x.",
+                    "options": ["2x + 6", "2x - 6", "4x + 6", "4x - 6"],
+                    "correctAnswer": "2x + 6"
+                },
+                {
+                    "question": "What is the solution to the equation: 5x^2 - 25 = 0?",
+                    "options": ["x = -5", "x = 0", "x = 5", "x = ±5"],
+                    "correctAnswer": "x = ±5"
+                }
+                // Add questions for Algebra
+            ],
+            
+            "Literature": [
+                {
+                    "question": "Who wrote the novel 'To Kill a Mockingbird'?",
+                    "options": ["Mark Twain", "J.K. Rowling", "Harper Lee", "George Orwell"],
+                    "correctAnswer": "Harper Lee"
+                },
+                {
+                    "question": "In Shakespeare's play 'Romeo and Juliet,' which family does Romeo belong to?",
+                    "options": ["Montague", "Capulet", "Verona", "Benvolio"],
+                    "correctAnswer": "Montague"
+                },
+                {
+                    "question": "Which classic novel features the characters Elizabeth Bennet and Mr. Darcy?",
+                    "options": ["Jane Eyre", "Wuthering Heights", "Pride and Prejudice", "Sense and Sensibility"],
+                    "correctAnswer": "Pride and Prejudice"
+                },
+                {
+                    "question": "Who is the author of the 'Harry Potter' series?",
+                    "options": ["J.R.R. Tolkien", "C.S. Lewis", "J.K. Rowling", "George R.R. Martin"],
+                    "correctAnswer": "J.K. Rowling"
+                },
+                {
+                    "question": "Which epic poem tells the story of the Trojan War and the fall of Troy?",
+                    "options": ["The Odyssey", "The Iliad", "Beowulf", "Paradise Lost"],
+                    "correctAnswer": "The Iliad"
+                }
+                // Add questions for Literature
+            ],
+
+
+            "Biotechnology": [
+                {
+                    "question": "What is the process of copying DNA to make multiple identical DNA molecules called?",
+                    "options": ["Translation", "Transcription", "Replication", "Recombination"],
+                    "correctAnswer": "Replication"
+                },
+                {
+                    "question": "Which biotechnological technique is used to create genetically identical organisms?",
+                    "options": ["Cloning", "Fermentation", "Polymerase Chain Reaction", "Gene Editing"],
+                    "correctAnswer": "Cloning"
+                },
+                {
+                    "question": "What is the study of the genetic composition and function of organisms called?",
+                    "options": ["Biotechnology", "Genomics", "Microbiology", "Biochemistry"],
+                    "correctAnswer": "Genomics"
+                },
+                {
+                    "question": "Which biotechnology application involves the introduction of genes from one species into another?",
+                    "options": ["Gene Therapy", "Genetic Engineering", "Bioremediation", "Stem Cell Therapy"],
+                    "correctAnswer": "Genetic Engineering"
+                },
+                {
+                    "question": "What is the term for the modification of an organism's genetic material to achieve specific goals?",
+                    "options": ["Mutation", "Hybridization", "Bioprocessing", "Genetic Modification"],
+                    "correctAnswer": "Genetic Modification"
+                }
+                // Add questions for Biotechnology
+            ],
+            
+            "Technology": [
+                {
+                    "question": "Who co-founded Microsoft along with Bill Gates?",
+                    "options": ["Steve Jobs", "Mark Zuckerberg", "Elon Musk", "Paul Allen"],
+                    "correctAnswer": "Paul Allen"
+                },
+                {
+                    "question": "Which programming language is commonly used for developing mobile apps?",
+                    "options": ["Java", "C++", "Python", "Swift"],
+                    "correctAnswer": "Swift"
+                },
+                {
+                    "question": "What does 'URL' stand for in the context of web addresses?",
+                    "options": ["Universal Resource Locator", "Uniform Resource Link", "Unified Resource Locator", "Universal Routing Language"],
+                    "correctAnswer": "Universal Resource Locator"
+                },
+                {
+                    "question": "Which tech company is known for its search engine and online advertising services?",
+                    "options": ["Apple", "Amazon", "Microsoft", "Google"],
+                    "correctAnswer": "Google"
+                },
+                {
+                    "question": "What is the term for the practice of using a single hardware component for multiple purposes?",
+                    "options": ["Virtualization", "Cloud Computing", "Parallel Processing", "Distributed Computing"],
+                    "correctAnswer": "Virtualization"
+                }
+                // Add questions for Technology
+            ],
+
+                
+                "Sociology": [
+                {
+                    "question": "Who is considered the founder of modern sociology?",
+                    "options": ["Karl Marx", "Max Weber", "Auguste Comte", "Emile Durkheim"],
+                    "correctAnswer": "Auguste Comte"
+                },
+                {
+                    "question": "What term is used to describe the process of learning one's culture and becoming aware of societal norms?",
+                    "options": ["Acculturation", "Socialization", "Assimilation", "Isolation"],
+                    "correctAnswer": "Socialization"
+                },
+                {
+                    "question": "Which sociological perspective focuses on the macro-level analysis of society and its structures?",
+                    "options": ["Functionalism", "Symbolic Interactionism", "Conflict Theory", "Feminism"],
+                    "correctAnswer": "Functionalism"
+                },
+                {
+                    "question": "What is the term for a group of people who share a common identity and interact with one another?",
+                    "options": ["Society", "Community", "Collective", "Clique"],
+                    "correctAnswer": "Community"
+                },
+                {
+                    "question": "Which sociological concept refers to the tendency for people to marry individuals with similar social characteristics?",
+                    "options": ["Heterogamy", "Homogamy", "Exogamy", "Endogamy"],
+                    "correctAnswer": "Homogamy"
+                }
+                // Add questions for Sociology
+            ],
+
+
+
+
         };
         //Function to start quiz with a given topic.
         function startQuiz(topic) {
