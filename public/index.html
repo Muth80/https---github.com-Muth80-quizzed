@@ -202,6 +202,40 @@
             padding: 10px;
         }
 
+        /* Make changes in quiz container according to different viewport */
+        .quiz-container {
+        width: 80%;
+        max-width: 800px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        }
+
+        /* Make answer options stack vertically on small screens */
+        @media(max-width: 768px) {
+        .options-container {
+            flex-direction: column;
+        }
+        .options-container button {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        .options-container button:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+        /* Make answer options and buttons smaller on extra small screens */
+        @media(max-width: 480px) {
+        .options-container button {
+            padding: 5px;
+            font-size: 14px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+
         h1, h2 {
             font-size: 24px;
         }
